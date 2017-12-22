@@ -16,9 +16,11 @@ def wcount(lines, topn=10):
     in reverse order, output the topn (word count), each in one line. 
     """
 
+    lines = lines.lower()
     for i in lines:
         if not(i.isalpha()):
             lines = lines.replace(i, ' ')
+        
     words_list = lines.split()
     d = {}
     for word in words_list:
